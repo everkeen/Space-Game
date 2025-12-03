@@ -1,0 +1,42 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            color: white;
+        }
+        #info {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid white;
+            display: inline-block;
+            text-align: left;
+        }
+    </style>
+    <title>Unsupported Browser/OS</title>
+</head>
+
+<body>
+    <h1>Unsupported Browser/Operating System</h1>
+    <p>We're sorry, but this application does not support your current browser or operating system.</p>
+    <p>Please try accessing the application using a different browser or update your current browser to the latest
+        version.</p>
+    <p>You may have to update your operating system as well.</p>
+    <h2>Your OS and Browser:</h2>
+    <div id="info"></div>
+    <script>
+        const infoDiv = document.getElementById('info');
+        const userAgent = navigator.userAgent;
+        const platform = navigator.platform;
+        infoDiv.innerHTML = `<p>User Agent: ${userAgent}</p><p>Platform: ${platform}</p>`;
+    </script>
+    <p>If you continue to have issues, please open an issue on our <a href="https://github.com/everkeen/Space-Game/issues">GitHub page</a>.</p>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdnjs.cloudflare.com/ajax/libs/three.js/0.180.0/three.module.min.js"
+            }
+        }
+    </script>
+    <script src="dist/game.js" type="module"></script>
+    <link rel="stylesheet" href="styles/main.css">
+    <title>Space Game</title>
+</head>
+
+<body>
+    <div id="body-container" class="vga">
+        <div id="container" class="container">
+            <div id="top-bar" class="top-bar">
+                <div class="app-title">SpaceOS</div> <!-- Making an OS-like interface for it :) -->
+            </div>
+            <main id="desktop" class="desktop">
+                <window-element title="Space Game" id="space-game" fullscreen>
+                    <button onclick="location.reload();">Refresh Page</button>
+                    <canvas id="gameCanvas" width="800" height="600" data-engine="three.js"
+                        class="game-canvas"></canvas>
+                </window-element>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>
